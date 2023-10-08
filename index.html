@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" class="sm:scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acme Rokets</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
+  <header class="sticky top-0 z-10 bg-teal-700 text-white">
+    <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
+      <h1 class="text-center text-3xl font-medium">
+        <a href="#hero">🚀 Acme Rokets</a>
+      </h1>
+      <div>
+        <button id="hamburger-button" class="cursor-pointer text-3xl md:hidden">
+          &#9776;
+          <!-- https://symbl.cc/en/ -->
+        </button>
+        <nav class="hidden space-x-8 text-xl sm:text-lg sm:font-medium md:block" aria-label="main">
+          <a href="#rockets" class="hover:opacity-90">Our Rockets</a>
+          <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
+          <a href="#contact" class="hover:opacity-90">Contact Us</a>
+        </nav>
+      </div>
+    </section>
+    <!-- Mobile Menu -->
+    <section id="mobile-menu"
+      class="justify-cente absolute top-0 w-full flex-col bg-black text-5xl origin-top animate-open-menu hidden">
+      <button class="self-end px-6 text-8xl">&times;</button>
+      <nav class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
+        <a href="#hero" class="w-full py-6 text-center hover:opacity-90">Home</a>
+        <a href="#rockets" class="w-full py-6 text-center hover:opacity-90">Our Rockets</a>
+        <a href="#testimonials" class="w-full py-6 text-center hover:opacity-90">Testimonials</a>
+        <a href="#contact" class="w-full py-6 text-center hover:opacity-90">Contact Us</a>
+      </nav>
+    </section>
+  </header>
+  <main class="mx-auto max-w-4xl">
+    <!-- Hero -->
+    <section id="hero"
+      class="mb-12 flex scroll-mt-20 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row">
+      <article class="sm:w-1/2">
+        <h2 class="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl">
+          We Boldy Go
+          <span class="text-indigo-700 dark:text-indigo-300">Where No Rocket</span>
+          Has Gone Before...
+        </h2>
+        <p class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left">
+          We're building rockets for the next century today. From the moon to
+          Mars, Jupiter and beyond...
+        </p>
+        <p class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left">
+          Think Acme Rockets.
+        </p>
+      </article>
+      <img src="./img/rocketdab.png" alt="Rocket Dab" class="w-1/2" />
+    </section>
+    <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+    <!-- Our Rockets -->
+    <section id="rockets" class="my-12 scroll-mt-20 p-6">
+      <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
+        Our Rockets
+      </h2>
+      <ul class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row" id="rocketsList">
+        <!-- Inner HTML comes from rockets.js file -->
+      </ul>
+    </section>
+    <!-- Testimonials -->
+    <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+    <section id="testimonials" class="my-12 scroll-mt-20 p-6">
+      <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
+        Testimonials
+      </h2>
+      <article id="testimonials-container">
+        <!-- Inner HTML comes from testimonials.js file -->
+      </article>
+    </section>
+    <!-- Contact Us -->
+    <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+    <section id="contact" class="my-12 scroll-mt-20 p-6">
+      <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
+        Contact Us
+      </h2>
+      <form action method="post" class="mx-auto flex max-w-4xl flex-col gap-4 text-2xl sm:text-3xl">
+        <fieldset class="flex flex-col gap-4">
+          <label for="subject">Subject:</label>
+          <input type="text" placeholder="Your Subject" name="subject"
+            class="w-full rounded-xl border border-solid border-slate-900 p-3 text-black dark:border-none" />
+        </fieldset>
+        <fieldset class="flex flex-col gap-4">
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" placeholder="Your Message" cols="30" rows="10"
+            class="w-full rounded-xl border border-solid border-slate-900 p-3 text-black dark:border-none"></textarea>
+        </fieldset>
+        <button
+          class="mx-auto w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 disabled:cursor-not-allowed dark:border-none"
+          disabled>
+          &#10047;
+        </button>
+      </form>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer class="flex w-full items-center justify-center bg-teal-700 p-6 text-lg font-medium italic text-black">
+    men Ahmed El-dawoudy
+  </footer>
+  <!-- Scripts -->
+  <script defer src="./js/mobileMenu.js"></script>
+  <script defer src="./js/rockets.js"></script>
+  <script defer src="./js/testimonials.js"></script>
+</body>
+
+</html>
